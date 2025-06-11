@@ -6,3 +6,5 @@
 .DS_Store
 .ipynb_checkpoints/
 */.DS_Store
+ML para AI/Obligatorio/models/knn_model.joblib
+ML para AI/Obligatorio/models/tree_model.joblib
