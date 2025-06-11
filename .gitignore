@@ -8,3 +8,4 @@
 */.DS_Store
 ML para AI/Obligatorio/models/knn_model.joblib
 ML para AI/Obligatorio/models/tree_model.joblib
+*.joblib
