@@ -322,8 +322,9 @@ def optimize_model_and_faces_with_optuna(
 
     # Finalize the model
     X_final_std = scaler_final.fit_transform(X_final)
+    X_final_pca = pca_final.fit_transform(X_final_std)
     final_model = model_constructor(**model_params_final)
-    final_model.fit(X_final_std, y_final)
+    final_model.fit(X_final_pca, y_final)
     
     print(f"\n=== FINAL RESULTS ===")
     print(f"Cross-validation F1-score (optimization): {best_score:.4f}")
@@ -392,7 +393,7 @@ def plot_optimization_results(study):
     import matplotlib.pyplot as plt
     import optuna
     
-    fig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2, 2, figsize=(15, 10))
+    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(15, 5))
     
     # Plot optimization history
     try:
@@ -416,32 +417,6 @@ def plot_optimization_results(study):
         ax2.text(0.5, 0.5, 'Parameter importance\nnot available', 
                 ha='center', va='center', transform=ax2.transAxes)
         ax2.set_title('Parameter Importances')
-    
-    # Plot parallel coordinate
-    try:
-        try:
-            optuna.visualization.matplotlib.plot_parallel_coordinate(study, ax=ax3)
-        except TypeError:
-            plt.sca(ax3)
-            optuna.visualization.matplotlib.plot_parallel_coordinate(study)
-        ax3.set_title('Parallel Coordinate Plot')
-    except Exception:
-        ax3.text(0.5, 0.5, 'Parallel coordinate\nnot available', 
-                ha='center', va='center', transform=ax3.transAxes)
-        ax3.set_title('Parallel Coordinate Plot')
-    
-    # Plot slice
-    try:
-        try:
-            optuna.visualization.matplotlib.plot_slice(study, ax=ax4)
-        except TypeError:
-            plt.sca(ax4)
-            optuna.visualization.matplotlib.plot_slice(study)
-        ax4.set_title('Slice Plot')
-    except Exception:
-        ax4.text(0.5, 0.5, 'Slice plot\nnot available', 
-                ha='center', va='center', transform=ax4.transAxes)
-        ax4.set_title('Slice Plot')
     
     plt.tight_layout()
     plt.show()
