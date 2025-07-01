@@ -342,9 +342,9 @@ def optimize_model_and_faces_with_optuna(
         'scaler': scaler_final,
         'pca': pca_final,
         'model_class': model_constructor,
-        'model_params': model_params_final,
+        # 'model_params': model_params_final,
         'pca_params': best_pca_params,
-        'n_positive_samples': best_n_positive,
+        # 'n_positive_samples': best_n_positive,
         'X_train_pca': X_train_pca_final,
         'y_train': y_train_final,
         'X_test_pca': X_test_pca_final,
@@ -393,30 +393,18 @@ def plot_optimization_results(study):
     import matplotlib.pyplot as plt
     import optuna
     
-    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(15, 5))
-    
     # Plot optimization history
     try:
         # Try new method (Optuna >= 3.0)
-        optuna.visualization.matplotlib.plot_optimization_history(study, ax=ax1)
-    except TypeError:
-        # Fallback for older versions or when ax parameter is not supported
-        plt.sca(ax1)  # Set current axes
         optuna.visualization.matplotlib.plot_optimization_history(study)
-    ax1.set_title('Optimization History')
-    
+    except TypeError:
+        print("Error: plot_optimization_history is not supported in this version of Optuna")
+        
     # Plot parameter importances
     try:
-        try:
-            optuna.visualization.matplotlib.plot_param_importances(study, ax=ax2)
-        except TypeError:
-            plt.sca(ax2)
-            optuna.visualization.matplotlib.plot_param_importances(study)
-        ax2.set_title('Parameter Importances')
-    except Exception:
-        ax2.text(0.5, 0.5, 'Parameter importance\nnot available', 
-                ha='center', va='center', transform=ax2.transAxes)
-        ax2.set_title('Parameter Importances')
+        optuna.visualization.matplotlib.plot_param_importances(study)
+    except TypeError:
+        print("Error: plot_param_importances is not supported in this version of Optuna")
     
     plt.tight_layout()
     plt.show()
@@ -643,7 +631,7 @@ def plot_pca_analysis_plotly(results, X_train_pca, y_train):
     fig.show()
 
 
-def confusion_matrix(results):
+def print_confusion_matrix(results):
     from sklearn.metrics import confusion_matrix, roc_curve, auc
     y_pred_binary = results['y_pred_final']
     y_test = results['y_test']
@@ -669,3 +657,141 @@ def confusion_matrix(results):
     print(f"FPR calculado manualmente: {fpr_manual:.4f}")
     
     return cm, tpr_manual, fpr_manual
+
+
+def plot_roc_curves_comparison(results_list, model_names=None, save_path=None, figsize=(12, 10)):
+    """
+    Plot ROC curves for multiple optimized models for comparison
+    
+    Parameters:
+    -----------
+    results_list : list
+        List of results dictionaries from optimize_model_and_faces_with_optuna function
+    model_names : list, optional
+        List of custom names for the models. If None, uses model class names
+    save_path : str, optional
+        Path to save the plot. If None, only displays the plot
+    figsize : tuple, optional
+        Figure size (width, height)
+        
+    Returns:
+    --------
+    dict: Dictionary containing results for each model:
+        - model_name: {'fpr', 'tpr', 'auc_score', 'thresholds'}
+    """
+    import matplotlib.pyplot as plt
+    import numpy as np
+    from sklearn.metrics import roc_curve, auc, roc_auc_score
+    
+    if not results_list:
+        print("Error: Empty results list provided")
+        return None
+    
+    # Prepare model names - Fix: Ensure all names are strings
+    if model_names is None:
+        model_names = []
+        for results in results_list:
+            if hasattr(results['model_class'], '__name__'):
+                model_names.append(results['model_class'].__name__)
+            else:
+                model_names.append(str(results['model_class']))
+    elif len(model_names) != len(results_list):
+        print("Error: Number of model names doesn't match number of results")
+        return None
+    
+    # Ensure all model names are strings
+    model_names = [str(name) for name in model_names]
+
+    
+    # Colors for different models
+    colors = ['darkorange', 'darkblue', 'darkgreen', 'red', 'purple', 'brown', 'pink', 'gray', 'olive', 'cyan']
+    
+    # Create the plot
+    plt.figure(figsize=figsize)
+    
+    # Store results for each model
+    all_results = {}
+    
+    # Process each model
+    for i, (results, model_name) in enumerate(zip(results_list, model_names)):
+        try:
+            # Extract necessary data
+            model = results['trained_model']
+            X_test_pca = results['X_test_pca']
+            y_test = results['y_test']
+            
+            # Get prediction probabilities
+            try:
+                y_proba = model.predict_proba(X_test_pca)[:, 1]
+            except AttributeError:
+                try:
+                    y_proba = model.decision_function(X_test_pca)
+                except AttributeError:
+                    print(f"Warning: Skipping {model_name} - no probability prediction available")
+                    continue
+            
+            # Calculate ROC curve
+            fpr, tpr, thresholds = roc_curve(y_test, y_proba)
+            auc_score = auc(fpr, tpr)
+            
+            # Plot ROC curve
+            color = colors[i % len(colors)]
+            plt.plot(fpr, tpr, color=color, lw=2, 
+                     label=f'{model_name} (AUC = {auc_score:.4f})')
+            
+            # Store results
+            all_results[model_name] = {
+                'fpr': fpr,
+                'tpr': tpr,
+                'auc_score': auc_score,
+                'thresholds': thresholds,
+                'test_f1': results['test_score'],
+                'cv_f1': results['cv_score']
+            }
+            
+        except Exception as e:
+            print(f"Error processing {model_name}: {e}")
+            continue
+    
+    # Plot diagonal line (random classifier)
+    plt.plot([0, 1], [0, 1], color='navy', lw=2, linestyle='--', 
+             label='Random Classifier (AUC = 0.5000)')
+    
+    # Customize plot
+    plt.xlim([0.0, 1.0])
+    plt.ylim([0.0, 1.05])
+    plt.xlabel('False Positive Rate (1 - Specificity)', fontsize=12)
+    plt.ylabel('True Positive Rate (Sensitivity)', fontsize=12)
+    plt.title('ROC Curves Comparison - Optimized Models', fontsize=14, fontweight='bold')
+    plt.legend(loc="lower right", fontsize=10)
+    plt.grid(True, alpha=0.3)
+    
+    plt.tight_layout()
+    
+    # Save plot if path provided
+    if save_path:
+        plt.savefig(save_path, dpi=300, bbox_inches='tight')
+        print(f"ROC comparison plot saved to: {save_path}")
+    
+    plt.show()
+    
+    # Print comparison table - Fix: Ensure proper string formatting
+    print(f"\n=== ROC COMPARISON - {len(all_results)} MODELS ===")
+    print(f"{'Model':<25} {'AUC':<8} {'Test F1':<10} {'CV F1':<8}")
+    print("-" * 55)
+    
+    # Sort by AUC score (descending)
+    sorted_results = sorted(all_results.items(), key=lambda x: x[1]['auc_score'], reverse=True)
+    
+    for model_name, metrics in sorted_results:
+        # Fix: Ensure model_name is properly formatted as string
+        model_name_str = str(model_name)[:24]  # Truncate if too long
+        print(f"{model_name_str:<25} {metrics['auc_score']:<8.4f} {metrics['test_f1']:<10.4f} {metrics['cv_f1']:<8.4f}")
+    
+    # Find best model
+    if sorted_results:
+        best_model, best_metrics = sorted_results[0]
+        best_model_str = str(best_model)
+        print(f"\nBest model by AUC: {best_model_str} (AUC = {best_metrics['auc_score']:.4f})")
+    
+    return all_results
