@@ -16,3 +16,5 @@ ML para AI/Obligatorio/models/knn_model.joblib
 ML para AI/Obligatorio/models/nb_model.joblib
 ML para AI/Obligatorio/models/tree_model.joblib
 ML para AI/Obligatorio/models/knn_model.joblib
+/.accelerate
+accelerate-prompt-system/
