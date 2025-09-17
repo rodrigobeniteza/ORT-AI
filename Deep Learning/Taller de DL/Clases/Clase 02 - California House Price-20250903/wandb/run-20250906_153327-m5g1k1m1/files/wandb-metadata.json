@@ -1,0 +1,17 @@
+{
+  "os":  "macOS-15.6.1-arm64-arm-64bit-Mach-O",
+  "python":  "CPython 3.13.1",
+  "startedAt":  "2025-09-06T18:33:27.323339Z",
+  "program":  "/Users/rodrigobenitez/Documents/GitHub/ORT-AI/Deep Learning/Taller de DL/Clase 02 - California House Price-20250903/California_House-letra.ipynb",
+  "codePath":  "Deep Learning/Taller de DL/Clase 02 - California House Price-20250903/California_House-letra.ipynb",
+  "codePathLocal":  "California_House-letra.ipynb",
+  "git":  {
+    "remote":  "https://github.com/rodrigobeniteza/ORT-AI.git",
+    "commit":  "8a0f25924a1268a0d8742ecdb72f09de43939060"
+  },
+  "email":  "rodrigo.benitezacosta@gmail.com",
+  "root":  "/Users/rodrigobenitez/Documents/GitHub/ORT-AI/Deep Learning/Taller de DL/Clase 02 - California House Price-20250903",
+  "host":  "MBP-00706",
+  "executable":  "/Users/rodrigobenitez/Documents/GitHub/ORT-AI/.venv/bin/python",
+  "writerId":  "4ner9b8sy8gx3ahl2j2qywgfsto05yhw"
+}

@@ -1,0 +1,8 @@
+wandb_version: 1
+
+batch_size:
+  value: 1024
+learning_rate:
+  value: 0.027434934942860343
+optimizer:
+  value: sgd

@@ -1,0 +1,147 @@
+2025-09-06 16:41:11,723 INFO    Thread-116 (_run_job):8534 [wandb_setup.py:_flush():81] Current SDK version is 0.21.3
+2025-09-06 16:41:11,723 INFO    Thread-116 (_run_job):8534 [wandb_setup.py:_flush():81] Configure stats pid to 8534
+2025-09-06 16:41:11,723 INFO    Thread-116 (_run_job):8534 [wandb_setup.py:_flush():81] Loading settings from /Users/rodrigobenitez/.config/wandb/settings
+2025-09-06 16:41:11,723 INFO    Thread-116 (_run_job):8534 [wandb_setup.py:_flush():81] Loading settings from /Users/rodrigobenitez/Documents/GitHub/ORT-AI/Deep Learning/Taller de DL/Clase 02 - California House Price-20250903/wandb/settings
+2025-09-06 16:41:11,723 INFO    Thread-116 (_run_job):8534 [wandb_setup.py:_flush():81] Loading settings from environment variables
+2025-09-06 16:41:11,723 INFO    Thread-116 (_run_job):8534 [wandb_init.py:setup_run_log_directory():686] Logging user logs to /Users/rodrigobenitez/Documents/GitHub/ORT-AI/Deep Learning/Taller de DL/Clase 02 - California House Price-20250903/wandb/run-20250906_164111-n2m4hze3/logs/debug.log
+2025-09-06 16:41:11,723 INFO    Thread-116 (_run_job):8534 [wandb_init.py:setup_run_log_directory():687] Logging internal logs to /Users/rodrigobenitez/Documents/GitHub/ORT-AI/Deep Learning/Taller de DL/Clase 02 - California House Price-20250903/wandb/run-20250906_164111-n2m4hze3/logs/debug-internal.log
+2025-09-06 16:41:11,723 INFO    Thread-116 (_run_job):8534 [wandb_init.py:monkeypatch_ipython():605] configuring jupyter hooks <wandb.sdk.wandb_init._WandbInit object at 0x15a0d4e10>
+2025-09-06 16:41:11,723 INFO    Thread-116 (_run_job):8534 [wandb_init.py:init():813] calling init triggers
+2025-09-06 16:41:11,723 INFO    Thread-116 (_run_job):8534 [wandb_init.py:init():818] wandb.init called with sweep_config: {'batch_size': 256, 'learning_rate': 0.025747880616610597, 'optimizer': 'sgd'}
+config: {'_wandb': {}}
+2025-09-06 16:41:11,723 INFO    Thread-116 (_run_job):8534 [wandb_init.py:init():854] starting backend
+2025-09-06 16:41:11,937 INFO    Thread-116 (_run_job):8534 [wandb_init.py:init():857] sending inform_init request
+2025-09-06 16:41:11,939 INFO    Thread-116 (_run_job):8534 [wandb_init.py:init():865] backend started and connected
+2025-09-06 16:41:11,941 INFO    Thread-116 (_run_job):8534 [wandb_run.py:_config_callback():1380] config_cb None None {'batch_size': 256, 'learning_rate': 0.025747880616610597, 'optimizer': 'sgd'}
+2025-09-06 16:41:11,949 INFO    Thread-116 (_run_job):8534 [wandb_run.py:_label_probe_notebook():1318] probe notebook
+2025-09-06 16:41:11,951 INFO    Thread-116 (_run_job):8534 [wandb_init.py:init():936] updated telemetry
+2025-09-06 16:41:11,975 INFO    Thread-116 (_run_job):8534 [wandb_init.py:init():960] communicating run to backend with 90.0 second timeout
+2025-09-06 16:41:12,834 INFO    Thread-116 (_run_job):8534 [wandb_init.py:init():1011] starting run threads in backend
+2025-09-06 16:41:12,906 INFO    Thread-116 (_run_job):8534 [wandb_run.py:_console_start():2494] atexit reg
+2025-09-06 16:41:12,906 INFO    Thread-116 (_run_job):8534 [wandb_run.py:_redirect():2342] redirect: wrap_raw
+2025-09-06 16:41:12,906 INFO    Thread-116 (_run_job):8534 [wandb_run.py:_redirect():2411] Wrapping output streams.
+2025-09-06 16:41:12,907 INFO    Thread-116 (_run_job):8534 [wandb_run.py:_redirect():2434] Redirects installed.
+2025-09-06 16:41:12,907 INFO    Thread-116 (_run_job):8534 [wandb_init.py:init():1057] run started, returning control to user process
+2025-09-06 16:41:17,937 INFO    MainThread:8534 [wandb_init.py:_post_run_cell_hook():575] [no run ID] resuming backend
+2025-09-06 16:41:17,937 INFO    wandb-AsyncioManager-main:8534 [service_client.py:_forward_responses():84] Reached EOF.
+2025-09-06 16:41:17,938 INFO    wandb-AsyncioManager-main:8534 [mailbox.py:close():137] Closing mailbox, abandoning 1 handles.
+2025-09-06 16:41:17,939 ERROR   wandb-AsyncioManager-main:8534 [asyncio_manager.py:fn_wrap_exceptions():183] [no run ID] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "/Users/rodrigobenitez/Documents/GitHub/ORT-AI/.venv/lib/python3.13/site-packages/wandb/sdk/lib/asyncio_manager.py", line 181, in fn_wrap_exceptions
+    await fn()
+  File "/Users/rodrigobenitez/Documents/GitHub/ORT-AI/.venv/lib/python3.13/site-packages/wandb/sdk/lib/service/service_client.py", line 65, in _send_server_request
+    await self._writer.drain()
+  File "/opt/homebrew/Cellar/python@3.13/3.13.1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/streams.py", line 386, in drain
+    await self._protocol._drain_helper()
+  File "/opt/homebrew/Cellar/python@3.13/3.13.1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2025-09-06 16:41:17,942 INFO    Thread-116 (_run_job):8534 [wandb_run.py:_finish():2260] finishing run rodrigo-benitezacosta-ort/California House RJ/n2m4hze3
+2025-09-06 16:41:17,942 ERROR   wandb-AsyncioManager-main:8534 [asyncio_manager.py:fn_wrap_exceptions():183] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "/Users/rodrigobenitez/Documents/GitHub/ORT-AI/.venv/lib/python3.13/site-packages/wandb/sdk/lib/asyncio_manager.py", line 181, in fn_wrap_exceptions
+    await fn()
+  File "/Users/rodrigobenitez/Documents/GitHub/ORT-AI/.venv/lib/python3.13/site-packages/wandb/sdk/lib/service/service_client.py", line 65, in _send_server_request
+    await self._writer.drain()
+  File "/opt/homebrew/Cellar/python@3.13/3.13.1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/streams.py", line 374, in drain
+    raise exc
+  File "/opt/homebrew/Cellar/python@3.13/3.13.1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/selector_events.py", line 1067, in write
+    n = self._sock.send(data)
+BrokenPipeError: [Errno 32] Broken pipe
+2025-09-06 16:41:17,943 INFO    Thread-116 (_run_job):8534 [jupyter.py:save_ipynb():404] not saving jupyter notebook
+2025-09-06 16:41:17,944 INFO    Thread-116 (_run_job):8534 [wandb_init.py:_jupyter_teardown():590] cleaning up jupyter logic
+2025-09-06 16:41:17,944 INFO    Thread-116 (_run_job):8534 [wandb_run.py:_atexit_cleanup():2459] got exitcode: 1
+2025-09-06 16:41:17,944 INFO    Thread-116 (_run_job):8534 [wandb_run.py:_restore():2441] restore
+2025-09-06 16:41:17,944 INFO    Thread-116 (_run_job):8534 [wandb_run.py:_restore():2447] restore done
+2025-09-06 16:41:17,944 INFO    Thread-116 (_run_job):8534 [wandb_run.py:_restore():2441] restore
+2025-09-06 16:41:17,944 INFO    Thread-116 (_run_job):8534 [wandb_run.py:_restore():2447] restore done
+2025-09-06 16:41:17,944 ERROR   Thread-116 (_run_job):8534 [wandb_run.py:_atexit_cleanup():2480] Problem finishing run
+Traceback (most recent call last):
+  File "/Users/rodrigobenitez/Documents/GitHub/ORT-AI/.venv/lib/python3.13/site-packages/wandb/agents/pyagent.py", line 297, in _run_job
+    self._function()
+    ~~~~~~~~~~~~~~^^
+  File "/var/folders/_q/twq0th115qx2v66s9dcxxpp40000gn/T/ipykernel_8534/766497478.py", line 25, in sweep_run
+    train(model, optimizer, CRITERION, train_loader, val_loader, EPOCHS, print_log, 1)
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/folders/_q/twq0th115qx2v66s9dcxxpp40000gn/T/ipykernel_8534/1640861019.py", line 68, in train
+    output = model(x)
+  File "/Users/rodrigobenitez/Documents/GitHub/ORT-AI/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/Users/rodrigobenitez/Documents/GitHub/ORT-AI/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/var/folders/_q/twq0th115qx2v66s9dcxxpp40000gn/T/ipykernel_8534/753519829.py", line 9, in forward
+    x = F.relu(self.input(x))
+               ~~~~~~~~~~^^^
+  File "/Users/rodrigobenitez/Documents/GitHub/ORT-AI/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/Users/rodrigobenitez/Documents/GitHub/ORT-AI/.venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/Users/rodrigobenitez/Documents/GitHub/ORT-AI/.venv/lib/python3.13/site-packages/torch/nn/modules/linear.py", line 125, in forward
+    return F.linear(input, self.weight, self.bias)
+           ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Exception
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/rodrigobenitez/Documents/GitHub/ORT-AI/.venv/lib/python3.13/site-packages/wandb/agents/pyagent.py", line 307, in _run_job
+    raise _JobError(f"Run threw exception: {str(e)}") from e
+wandb.agents.pyagent._JobError: Run threw exception: 
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/rodrigobenitez/Documents/GitHub/ORT-AI/.venv/lib/python3.13/site-packages/wandb/sdk/wandb_run.py", line 2471, in _atexit_cleanup
+    self._on_finish()
+    ~~~~~~~~~~~~~~~^^
+  File "/Users/rodrigobenitez/Documents/GitHub/ORT-AI/.venv/lib/python3.13/site-packages/wandb/sdk/wandb_run.py", line 2714, in _on_finish
+    exit_handle = self._backend.interface.deliver_exit(self._exit_code)
+  File "/Users/rodrigobenitez/Documents/GitHub/ORT-AI/.venv/lib/python3.13/site-packages/wandb/sdk/interface/interface.py", line 1004, in deliver_exit
+    return self._deliver_exit(exit_data)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/Users/rodrigobenitez/Documents/GitHub/ORT-AI/.venv/lib/python3.13/site-packages/wandb/sdk/interface/interface_shared.py", line 416, in _deliver_exit
+    return self._deliver(record)
+           ~~~~~~~~~~~~~^^^^^^^^
+  File "/Users/rodrigobenitez/Documents/GitHub/ORT-AI/.venv/lib/python3.13/site-packages/wandb/sdk/interface/interface_sock.py", line 48, in _deliver
+    handle = self._client.deliver(request)
+  File "/Users/rodrigobenitez/Documents/GitHub/ORT-AI/.venv/lib/python3.13/site-packages/wandb/sdk/lib/service/service_client.py", line 54, in deliver
+    handle = self._mailbox.require_response(request)
+  File "/Users/rodrigobenitez/Documents/GitHub/ORT-AI/.venv/lib/python3.13/site-packages/wandb/sdk/mailbox/mailbox.py", line 76, in require_response
+    raise MailboxClosedError()
+wandb.sdk.mailbox.mailbox.MailboxClosedError
+2025-09-06 16:42:00,676 INFO    MainThread:8534 [pyagent.py:run():323] [no run ID] Starting sweep agent: entity=None, project=None, count=10
+2025-09-06 16:42:00,951 ERROR   MainThread:8534 [internal_api.py:execute():402] [no run ID] Error executing GraphQL.
+Traceback (most recent call last):
+  File "/Users/rodrigobenitez/Documents/GitHub/ORT-AI/.venv/lib/python3.13/site-packages/wandb/sdk/internal/internal_api.py", line 398, in execute
+    return self.client.execute(*args, **kwargs)  # type: ignore
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/Users/rodrigobenitez/Documents/GitHub/ORT-AI/.venv/lib/python3.13/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+  File "/Users/rodrigobenitez/Documents/GitHub/ORT-AI/.venv/lib/python3.13/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rodrigobenitez/Documents/GitHub/ORT-AI/.venv/lib/python3.13/site-packages/wandb/sdk/lib/gql_request.py", line 59, in execute
+    request.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/rodrigobenitez/Documents/GitHub/ORT-AI/.venv/lib/python3.13/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://api.wandb.ai/graphql
+2025-09-06 16:42:19,165 INFO    MainThread:8534 [pyagent.py:run():323] [no run ID] Starting sweep agent: entity=None, project=None, count=10
+2025-09-06 16:42:19,444 ERROR   MainThread:8534 [internal_api.py:execute():402] [no run ID] Error executing GraphQL.
+Traceback (most recent call last):
+  File "/Users/rodrigobenitez/Documents/GitHub/ORT-AI/.venv/lib/python3.13/site-packages/wandb/sdk/internal/internal_api.py", line 398, in execute
+    return self.client.execute(*args, **kwargs)  # type: ignore
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/Users/rodrigobenitez/Documents/GitHub/ORT-AI/.venv/lib/python3.13/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+  File "/Users/rodrigobenitez/Documents/GitHub/ORT-AI/.venv/lib/python3.13/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rodrigobenitez/Documents/GitHub/ORT-AI/.venv/lib/python3.13/site-packages/wandb/sdk/lib/gql_request.py", line 59, in execute
+    request.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/rodrigobenitez/Documents/GitHub/ORT-AI/.venv/lib/python3.13/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://api.wandb.ai/graphql

@@ -1,0 +1,62 @@
+_wandb:
+    value:
+        cli_version: 0.21.3
+        e:
+            wfep9600nk798cco2ed0f02xu25bvkxs:
+                apple:
+                    ecpuCores: 4
+                    gpuCores: 10
+                    memoryGb: 16
+                    name: Apple M3
+                    pcpuCores: 4
+                    ramTotalBytes: "17179869184"
+                    swapTotalBytes: "16106127360"
+                codePath: Deep Learning/Taller de DL/Clase 02 - California House Price-20250903/California_House-letra.ipynb
+                codePathLocal: California_House-letra.ipynb
+                cpu_count: 8
+                cpu_count_logical: 8
+                disk:
+                    /:
+                        total: "494384795648"
+                        used: "186865197056"
+                email: rodrigo.benitezacosta@gmail.com
+                executable: /Users/rodrigobenitez/Documents/GitHub/ORT-AI/.venv/bin/python
+                git:
+                    commit: 8a0f25924a1268a0d8742ecdb72f09de43939060
+                    remote: https://github.com/rodrigobeniteza/ORT-AI.git
+                host: MBP-00706
+                memory:
+                    total: "17179869184"
+                os: macOS-15.6.1-arm64-arm-64bit-Mach-O
+                program: /Users/rodrigobenitez/Documents/GitHub/ORT-AI/Deep Learning/Taller de DL/Clase 02 - California House Price-20250903/California_House-letra.ipynb
+                python: CPython 3.13.1
+                root: /Users/rodrigobenitez/Documents/GitHub/ORT-AI/Deep Learning/Taller de DL/Clase 02 - California House Price-20250903
+                startedAt: "2025-09-06T19:27:02.056145Z"
+                writerId: wfep9600nk798cco2ed0f02xu25bvkxs
+        m: []
+        python_version: 3.13.1
+        t:
+            "1":
+                - 1
+                - 5
+                - 53
+            "2":
+                - 1
+                - 5
+                - 53
+            "3":
+                - 2
+                - 3
+                - 14
+            "4": 3.13.1
+            "5": 0.21.3
+            "8":
+                - 1
+            "12": 0.21.3
+            "13": darwin-arm64
+batch_size:
+    value: 32
+learning_rate:
+    value: 0.04981246693674332
+optimizer:
+    value: adam

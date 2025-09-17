@@ -1,0 +1,31 @@
+2025-09-06 15:33:21,927 INFO    Thread-15 (_run_job):8534 [wandb_setup.py:_flush():81] Current SDK version is 0.21.3
+2025-09-06 15:33:21,927 INFO    Thread-15 (_run_job):8534 [wandb_setup.py:_flush():81] Configure stats pid to 8534
+2025-09-06 15:33:21,928 INFO    Thread-15 (_run_job):8534 [wandb_setup.py:_flush():81] Loading settings from /Users/rodrigobenitez/.config/wandb/settings
+2025-09-06 15:33:21,928 INFO    Thread-15 (_run_job):8534 [wandb_setup.py:_flush():81] Loading settings from /Users/rodrigobenitez/Documents/GitHub/ORT-AI/Deep Learning/Taller de DL/Clase 02 - California House Price-20250903/wandb/settings
+2025-09-06 15:33:21,928 INFO    Thread-15 (_run_job):8534 [wandb_setup.py:_flush():81] Loading settings from environment variables
+2025-09-06 15:33:21,928 INFO    Thread-15 (_run_job):8534 [wandb_init.py:setup_run_log_directory():686] Logging user logs to /Users/rodrigobenitez/Documents/GitHub/ORT-AI/Deep Learning/Taller de DL/Clase 02 - California House Price-20250903/wandb/run-20250906_153321-si79gn8w/logs/debug.log
+2025-09-06 15:33:21,928 INFO    Thread-15 (_run_job):8534 [wandb_init.py:setup_run_log_directory():687] Logging internal logs to /Users/rodrigobenitez/Documents/GitHub/ORT-AI/Deep Learning/Taller de DL/Clase 02 - California House Price-20250903/wandb/run-20250906_153321-si79gn8w/logs/debug-internal.log
+2025-09-06 15:33:21,928 INFO    Thread-15 (_run_job):8534 [wandb_init.py:monkeypatch_ipython():605] configuring jupyter hooks <wandb.sdk.wandb_init._WandbInit object at 0x158c15ba0>
+2025-09-06 15:33:21,928 INFO    Thread-15 (_run_job):8534 [wandb_init.py:init():813] calling init triggers
+2025-09-06 15:33:21,928 INFO    Thread-15 (_run_job):8534 [wandb_init.py:init():818] wandb.init called with sweep_config: {'batch_size': 32, 'learning_rate': 0.05837432915646228, 'optimizer': 'sgd'}
+config: {'_wandb': {}}
+2025-09-06 15:33:21,928 INFO    Thread-15 (_run_job):8534 [wandb_init.py:init():854] starting backend
+2025-09-06 15:33:22,153 INFO    Thread-15 (_run_job):8534 [wandb_init.py:init():857] sending inform_init request
+2025-09-06 15:33:22,155 INFO    Thread-15 (_run_job):8534 [wandb_init.py:init():865] backend started and connected
+2025-09-06 15:33:22,157 INFO    Thread-15 (_run_job):8534 [wandb_run.py:_config_callback():1380] config_cb None None {'batch_size': 32, 'learning_rate': 0.05837432915646228, 'optimizer': 'sgd'}
+2025-09-06 15:33:22,161 INFO    Thread-15 (_run_job):8534 [wandb_run.py:_label_probe_notebook():1318] probe notebook
+2025-09-06 15:33:22,162 INFO    Thread-15 (_run_job):8534 [wandb_init.py:init():936] updated telemetry
+2025-09-06 15:33:22,190 INFO    Thread-15 (_run_job):8534 [wandb_init.py:init():960] communicating run to backend with 90.0 second timeout
+2025-09-06 15:33:22,950 INFO    Thread-15 (_run_job):8534 [wandb_init.py:init():1011] starting run threads in backend
+2025-09-06 15:33:22,990 INFO    Thread-15 (_run_job):8534 [wandb_run.py:_console_start():2494] atexit reg
+2025-09-06 15:33:22,990 INFO    Thread-15 (_run_job):8534 [wandb_run.py:_redirect():2342] redirect: wrap_raw
+2025-09-06 15:33:22,990 INFO    Thread-15 (_run_job):8534 [wandb_run.py:_redirect():2411] Wrapping output streams.
+2025-09-06 15:33:22,990 INFO    Thread-15 (_run_job):8534 [wandb_run.py:_redirect():2434] Redirects installed.
+2025-09-06 15:33:22,990 INFO    Thread-15 (_run_job):8534 [wandb_init.py:init():1057] run started, returning control to user process
+2025-09-06 15:33:22,990 INFO    Thread-15 (_run_job):8534 [wandb_run.py:_finish():2260] finishing run rodrigo-benitezacosta-ort/[WANDB_PROJECT]/si79gn8w
+2025-09-06 15:33:22,991 INFO    Thread-15 (_run_job):8534 [jupyter.py:save_ipynb():404] not saving jupyter notebook
+2025-09-06 15:33:22,991 INFO    Thread-15 (_run_job):8534 [wandb_init.py:_jupyter_teardown():590] cleaning up jupyter logic
+2025-09-06 15:33:22,991 INFO    Thread-15 (_run_job):8534 [wandb_run.py:_atexit_cleanup():2459] got exitcode: 0
+2025-09-06 15:33:22,991 INFO    Thread-15 (_run_job):8534 [wandb_run.py:_restore():2441] restore
+2025-09-06 15:33:22,991 INFO    Thread-15 (_run_job):8534 [wandb_run.py:_restore():2447] restore done
+2025-09-06 15:33:25,021 INFO    Thread-15 (_run_job):8534 [wandb_run.py:_footer_sync_info():3855] logging synced files
