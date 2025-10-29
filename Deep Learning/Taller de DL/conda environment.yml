@@ -1,13 +1,16 @@
 name: taller-dl
 channels:
+  - pytorch
+  - nvidia
   - conda-forge
   - defaults
 dependencies:
-  - python>=3.12
+  - python=3.12
   - ipykernel
-  - conda-forge::pytorch
-  - conda-forge::torchvision
-  - conda-forge::torchaudio
+  - pytorch::pytorch
+  - pytorch::torchvision
+  - pytorch::torchaudio
+  - pytorch::pytorch-cuda=12.1
   - numpy
   - scikit-learn
   - matplotlib
@@ -17,3 +20,4 @@ dependencies:
   - pip
   - pip:
     - torchinfo
+    - wandb
