@@ -10,6 +10,7 @@ ML para AI/Obligatorio/models/knn_model.joblib
 ML para AI/Obligatorio/models/tree_model.joblib
 *.joblib
 *.csv
+/venv/
 /ML para AI/Obligatorio/models
 *.joblib
 ML para AI/Obligatorio/models/knn_model.joblib
