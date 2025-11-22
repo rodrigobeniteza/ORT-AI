@@ -255,7 +255,6 @@ def find_mask_for_image(
 
 def ensure_same_size(img: Image.Image, mask: Image.Image) -> Tuple[Image.Image, Image.Image]:
     if img.size != mask.size:
-        # Redimensionamos la máscara a la imagen usando NEAREST
         mask = mask.resize(img.size, resample=Image.NEAREST)
     return img, mask
 
