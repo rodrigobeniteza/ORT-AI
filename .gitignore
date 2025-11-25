@@ -43,3 +43,5 @@ Deep Learning/Modelos de DL/Entregas/Entrega 2/mnist1d_data.pkl
 /Deep Learning/Taller de DL/Tareas/Tarea 2/wandb
 /Deep Learning/Taller de DL/Tareas/Obligatorio/__pycache__
 Deep Learning/Taller de DL/Tareas/Obligatorio/best_unet.pth
+*.pth
+/Deep Learning/Taller de DL/Tareas/Obligatorio/wandb
