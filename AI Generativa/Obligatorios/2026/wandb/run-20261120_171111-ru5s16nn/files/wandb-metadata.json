@@ -1,0 +1,41 @@
+{
+  "os": "macOS-26.7.1-arm64-arm-64bit",
+  "python": "CPython 3.11.7",
+  "startedAt": "2026-11-20T20:11:11.042662Z",
+  "program": "/Users/josefina.lin/Documents/GitHub/ORT-AI/AI Generativa/Obligatorios/2026/SentenceVAE-letra.ipynb",
+  "codePath": "/Users/josefina.lin/Documents/GitHub/ORT-AI/AI Generativa/Obligatorios/2026/SentenceVAE-letra.ipynb",
+  "codePathLocal": "SentenceVAE-letra.ipynb",
+  "git": {
+    "remote": "https://github.com/rodrigobeniteza/ORT-AI.git",
+    "commit": "27a8ecc764873637afe8feb3ebb626abfbf5dc38"
+  },
+  "email": "josefinalin92@gmail.com",
+  "root": "/Users/josefina.lin/Documents/GitHub/ORT-AI/AI Generativa/Obligatorios/2026",
+  "host": "192.168.68.108",
+  "executable": "/Users/josefina.lin/Documents/GitHub/ORT-AI/ia-generativa/bin/python",
+  "cpu_count": 8,
+  "cpu_count_logical": 8,
+  "disk": {
+    "/": {
+      "total": "494384795648",
+      "used": "342631862272"
+    }
+  },
+  "memory": {
+    "total": "17179869184"
+  },
+  "cpu": {
+    "model": "Apple M2"
+  },
+  "apple": {
+    "name": "Apple M2",
+    "ecpuCores": 4,
+    "pcpuCores": 4,
+    "gpuCores": 10,
+    "memoryGb": 16,
+    "swapTotalBytes": "6442450944",
+    "ramTotalBytes": "17179869184",
+    "macModel": "Mac14,7"
+  },
+  "writerId": "01a1fa95-9b47-7ba0-95ad-4ef2166318a6"
+}

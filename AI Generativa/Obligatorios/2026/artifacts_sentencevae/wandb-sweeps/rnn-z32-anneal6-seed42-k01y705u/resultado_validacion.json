@@ -1,0 +1,26 @@
+{
+  "run_id": "k01y705u",
+  "config": {
+    "anneal_epochs": 6,
+    "architecture": "rnn",
+    "batch_size": 64,
+    "emb_dim": 64,
+    "epochs": 15,
+    "hidden_dim": 256,
+    "latent_dim": 32,
+    "learning_rate": 0.001,
+    "seed": 42,
+    "word_dropout": 0.5
+  },
+  "best_epoch": 14,
+  "parameters": 1442302,
+  "checkpoint": "artifacts_sentencevae/wandb-sweeps/rnn-z32-anneal6-seed42-k01y705u/best.pt",
+  "recon": 49.9811689064229,
+  "kl": 0.007524716570204784,
+  "neg_elbo": 49.988693622993104,
+  "ppl_recon": 123.4957709818101,
+  "ppl_elbo": 123.58534837496728,
+  "n_sent": 1202,
+  "n_tok": 12474,
+  "mc_samples": 8
+}

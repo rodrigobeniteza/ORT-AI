@@ -1,0 +1,26 @@
+{
+  "run_id": "bg0847sl",
+  "config": {
+    "anneal_epochs": 6,
+    "architecture": "lstm",
+    "batch_size": 64,
+    "emb_dim": 64,
+    "epochs": 15,
+    "hidden_dim": 256,
+    "latent_dim": 8,
+    "learning_rate": 0.001,
+    "seed": 42,
+    "word_dropout": 0.5
+  },
+  "best_epoch": 14,
+  "parameters": 1918414,
+  "checkpoint": "artifacts_sentencevae/wandb-sweeps/lstm-z8-anneal6-seed42-bg0847sl/best.pt",
+  "recon": 48.26283153638665,
+  "kl": 1.5704557625902273,
+  "neg_elbo": 49.83328729897688,
+  "ppl_recon": 104.65060029420472,
+  "ppl_elbo": 121.7484434629188,
+  "n_sent": 1202,
+  "n_tok": 12474,
+  "mc_samples": 8
+}

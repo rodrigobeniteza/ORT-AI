@@ -1,0 +1,26 @@
+{
+  "run_id": "rzmzur6w",
+  "config": {
+    "anneal_epochs": 0,
+    "architecture": "rnn",
+    "batch_size": 64,
+    "emb_dim": 64,
+    "epochs": 15,
+    "hidden_dim": 256,
+    "latent_dim": 8,
+    "learning_rate": 0.001,
+    "seed": 42,
+    "word_dropout": 0.5
+  },
+  "best_epoch": 12,
+  "parameters": 1423822,
+  "checkpoint": "artifacts_sentencevae/wandb-sweeps/rnn-z8-anneal0-seed42-rzmzur6w/best.pt",
+  "recon": 50.1002877722564,
+  "kl": 0.0023623992798977008,
+  "neg_elbo": 50.102650171536304,
+  "ppl_recon": 124.92146470819516,
+  "ppl_elbo": 124.94990529350451,
+  "n_sent": 1202,
+  "n_tok": 12474,
+  "mc_samples": 8
+}

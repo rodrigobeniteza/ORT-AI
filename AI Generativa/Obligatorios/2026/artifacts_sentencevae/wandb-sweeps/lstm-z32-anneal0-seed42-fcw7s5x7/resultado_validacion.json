@@ -1,0 +1,26 @@
+{
+  "run_id": "fcw7s5x7",
+  "config": {
+    "anneal_epochs": 0,
+    "architecture": "lstm",
+    "batch_size": 64,
+    "emb_dim": 64,
+    "epochs": 15,
+    "hidden_dim": 256,
+    "latent_dim": 32,
+    "learning_rate": 0.001,
+    "seed": 42,
+    "word_dropout": 0.5
+  },
+  "best_epoch": 15,
+  "parameters": 1936894,
+  "checkpoint": "artifacts_sentencevae/wandb-sweeps/lstm-z32-anneal0-seed42-fcw7s5x7/best.pt",
+  "recon": 49.45448919937337,
+  "kl": 0.07150535900362716,
+  "neg_elbo": 49.52599455837699,
+  "ppl_recon": 117.38461246811423,
+  "ppl_elbo": 118.19621904154354,
+  "n_sent": 1202,
+  "n_tok": 12474,
+  "mc_samples": 8
+}

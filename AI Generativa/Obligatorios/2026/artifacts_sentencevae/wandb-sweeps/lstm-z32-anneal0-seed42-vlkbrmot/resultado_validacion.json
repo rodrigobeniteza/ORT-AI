@@ -1,0 +1,26 @@
+{
+  "run_id": "vlkbrmot",
+  "config": {
+    "anneal_epochs": 0,
+    "architecture": "lstm",
+    "batch_size": 64,
+    "emb_dim": 64,
+    "epochs": 15,
+    "hidden_dim": 256,
+    "latent_dim": 32,
+    "learning_rate": 0.001,
+    "seed": 42,
+    "word_dropout": 0.5
+  },
+  "best_epoch": 15,
+  "parameters": 1936894,
+  "checkpoint": "artifacts_sentencevae/wandb-sweeps/lstm-z32-anneal0-seed42-vlkbrmot/best.pt",
+  "recon": 49.454489507214994,
+  "kl": 0.07150532824673787,
+  "neg_elbo": 49.52599483546173,
+  "ppl_recon": 117.38461595018225,
+  "ppl_elbo": 118.1962221973831,
+  "n_sent": 1202,
+  "n_tok": 12474,
+  "mc_samples": 8
+}

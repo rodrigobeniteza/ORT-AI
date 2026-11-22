@@ -1,0 +1,26 @@
+{
+  "run_id": "evwg66kv",
+  "config": {
+    "anneal_epochs": 0,
+    "architecture": "rnn",
+    "batch_size": 64,
+    "emb_dim": 64,
+    "epochs": 15,
+    "hidden_dim": 256,
+    "latent_dim": 8,
+    "learning_rate": 0.001,
+    "seed": 42,
+    "word_dropout": 0.5
+  },
+  "best_epoch": 12,
+  "parameters": 1423822,
+  "checkpoint": "artifacts_sentencevae/wandb-sweeps/rnn-z8-anneal0-seed42-evwg66kv/best.pt",
+  "recon": 50.10027392811069,
+  "kl": 0.002361963250087001,
+  "neg_elbo": 50.10263589136078,
+  "ppl_recon": 124.9212980595959,
+  "ppl_elbo": 124.94973335707414,
+  "n_sent": 1202,
+  "n_tok": 12474,
+  "mc_samples": 8
+}

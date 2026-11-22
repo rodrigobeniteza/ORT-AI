@@ -1,0 +1,26 @@
+{
+  "run_id": "k9v0joxg",
+  "config": {
+    "anneal_epochs": 0,
+    "architecture": "rnn",
+    "batch_size": 64,
+    "emb_dim": 64,
+    "epochs": 15,
+    "hidden_dim": 256,
+    "latent_dim": 32,
+    "learning_rate": 0.001,
+    "seed": 42,
+    "word_dropout": 0.5
+  },
+  "best_epoch": 14,
+  "parameters": 1442302,
+  "checkpoint": "artifacts_sentencevae/wandb-sweeps/rnn-z32-anneal0-seed42-k9v0joxg/best.pt",
+  "recon": 49.994675745781564,
+  "kl": 0.0023834786649805785,
+  "neg_elbo": 49.997059224446545,
+  "ppl_recon": 123.65660844019155,
+  "ppl_elbo": 123.68501228959845,
+  "n_sent": 1202,
+  "n_tok": 12474,
+  "mc_samples": 8
+}

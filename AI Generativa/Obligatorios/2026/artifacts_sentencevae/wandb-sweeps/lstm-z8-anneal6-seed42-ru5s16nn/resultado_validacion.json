@@ -1,0 +1,26 @@
+{
+  "run_id": "ru5s16nn",
+  "config": {
+    "anneal_epochs": 6,
+    "architecture": "lstm",
+    "batch_size": 64,
+    "emb_dim": 64,
+    "epochs": 15,
+    "hidden_dim": 256,
+    "latent_dim": 8,
+    "learning_rate": 0.001,
+    "seed": 42,
+    "word_dropout": 0.5
+  },
+  "best_epoch": 14,
+  "parameters": 1918414,
+  "checkpoint": "artifacts_sentencevae/wandb-sweeps/lstm-z8-anneal6-seed42-ru5s16nn/best.pt",
+  "recon": 48.26284653097143,
+  "kl": 1.570483477857466,
+  "neg_elbo": 49.833330008828895,
+  "ppl_recon": 104.6507515023581,
+  "ppl_elbo": 121.74894452450151,
+  "n_sent": 1202,
+  "n_tok": 12474,
+  "mc_samples": 8
+}
