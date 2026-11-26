@@ -1,0 +1,97 @@
+_wandb:
+    value:
+        cli_version: 0.31.2
+        e:
+            01a20fa5-7781-7392-9efd-e4664726c772:
+                apple:
+                    ecpuCores: 4
+                    gpuCores: 10
+                    macModel: Mac15,3
+                    memoryGb: 16
+                    name: Apple M3
+                    pcpuCores: 4
+                    ramTotalBytes: "17179869184"
+                    swapTotalBytes: "18253611008"
+                codePath: /Users/rodrigobenitez/Documents/GitHub/ORT-AI/AI Generativa/Obligatorios/2026/SentenceVAE-letra.ipynb
+                codePathLocal: SentenceVAE-letra.ipynb
+                cpu:
+                    model: Apple M3
+                cpu_count: 8
+                cpu_count_logical: 8
+                disk:
+                    /:
+                        total: "494384795648"
+                        used: "295479250944"
+                email: josefinalin92@gmail.com
+                executable: /opt/miniconda3/envs/obl_taller_ia/bin/python
+                git:
+                    commit: 36db054006b9acc4b65ec1b59ec5095404407e0f
+                    remote: https://github.com/rodrigobeniteza/ORT-AI.git
+                host: MBP-DKGP363JQN
+                memory:
+                    total: "17179869184"
+                os: macOS-27.2.1-arm64-arm-64bit-Mach-O
+                program: /Users/rodrigobenitez/Documents/GitHub/ORT-AI/AI Generativa/Obligatorios/2026/SentenceVAE-letra.ipynb
+                python: CPython 3.13.13
+                root: /Users/rodrigobenitez/Documents/GitHub/ORT-AI/AI Generativa/Obligatorios/2026
+                startedAt: "2026-11-24T22:20:31.987384Z"
+                writerId: 01a20fa5-7781-7392-9efd-e4664726c772
+        m:
+            - "1": epoch
+              "6":
+                - 3
+              "7": []
+            - "1": beta
+              "5": 1
+              "6":
+                - 1
+                - 3
+              "7": []
+            - "2": train_*
+              "5": 1
+              "6":
+                - 1
+              "7": []
+            - "2": val_*
+              "5": 1
+              "6":
+                - 1
+              "7": []
+        python_version: 3.13.13
+        t:
+            "1":
+                - 1
+            "2":
+                - 1
+            "3":
+                - 2
+                - 7
+                - 14
+                - 17
+            "4": 3.13.13
+            "5": 0.31.2
+            "8":
+                - 1
+                - 16
+            "12": 0.31.2
+            "13": darwin-arm64
+anneal_epochs:
+    value: 6
+architecture:
+    value: rnn
+batch_size:
+    value: 64
+emb_dim:
+    value: 64
+epochs:
+    value: 15
+hidden_dim:
+    value: 256
+latent_dim:
+    value: 32
+learning_rate:
+    value: 0.001
+seed:
+    value: 42
+word_dropout:
+    value: 0.5
