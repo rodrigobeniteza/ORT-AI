@@ -1,0 +1,26 @@
+{
+  "run_id": "mslrvgpc",
+  "config": {
+    "anneal_epochs": 6,
+    "architecture": "lstm",
+    "batch_size": 64,
+    "emb_dim": 64,
+    "epochs": 15,
+    "hidden_dim": 256,
+    "latent_dim": 32,
+    "learning_rate": 0.001,
+    "seed": 42,
+    "word_dropout": 0.5
+  },
+  "best_epoch": 15,
+  "parameters": 1936894,
+  "checkpoint": "artifacts_sentencevae/wandb-sweeps/lstm-z32-anneal6-seed42-mslrvgpc/best.pt",
+  "recon": 48.35474126469871,
+  "kl": 1.2232288566484626,
+  "neg_elbo": 49.57797012134717,
+  "ppl_recon": 105.58155062278693,
+  "ppl_elbo": 118.78967640889125,
+  "n_sent": 1202,
+  "n_tok": 12474,
+  "mc_samples": 8
+}
